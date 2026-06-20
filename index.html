@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김태형 | 포트폴리오 & 프로젝트</title>
+    <!-- 눈누 프리텐다드 폰트 적용 (깔끔하고 세련된 서체) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>
         body {
@@ -36,20 +37,13 @@
             color: #0066cc; /* 링크드인 헤드라인처럼 전문적인 블루 톤 */
             margin: 0 0 20px 0;
         }
-        /* .bio {
-            font-size: 15px;
-            color: #444444;
-            line-height: 1.7;
-            margin: 0;
-            word-break: keep-all;
-        } */
         .bio {
             font-size: 15px;
             color: #444444;
             line-height: 1.7;
             margin: 0;
-            word-break: keep-all;
-            text-align: justify; /* 👈 양끝 정렬을 적용하여 직사각형 모양으로 만들어줍니다 */
+            text-align: justify;   /* 양끝 정렬로 직사각형 모양 만들기 */
+            word-break: break-all; /* 끝선을 완벽하게 맞춤 */
         }
         .bio p {
             margin: 0 0 16px 0;
@@ -91,21 +85,21 @@
             text-decoration: none;
             border-bottom: 1px solid #004499; /* 마우스 올렸을 때만 밑줄 */
         }
-        /* 2. 프로젝트 설명글 섹션 정렬 */
         .description {
             display: block;
             margin-top: 8px;
             font-size: 14px;
-            color: #555555;
+            color: #555555; /* 부드러운 회색조 글씨 */
             line-height: 1.6;
             font-weight: 400;
-            text-align: justify;   /* 👈 양끝 정렬 추가 */
-            word-break: break-all; /* 👈 끝선을 완벽한 직사각형으로 맞춤 */
+            text-align: justify;   /* 양끝 정렬로 직사각형 모양 만들기 */
+            word-break: break-all; /* 끝선을 완벽하게 맞춤 */
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 자기소개 섹션 -->
         <section class="intro-section">
             <h1 class="name">김태형</h1>
             <p class="headline">품질관리(QC) 직무 수행 및 AI 활용 생산성 도구 개발자</p>
@@ -116,6 +110,7 @@
             </div>
         </section>
 
+        <!-- 프로젝트 링크 섹션 -->
         <section class="projects-section">
             <h2>Featured Projects</h2>
             <ul>
@@ -124,12 +119,13 @@
                     <span class="description">(주)우진켐에서 품질관리(QC) 업무를 수행하며 경험한 페인 포인트를 해결하기 위해 만들었습니다. 정밀한 제어가 필요한 그라비어 인쇄 포장재 공정에서 불량이 발생했을 때 반복적이고 복잡했던 대책보고서 작성 과정을 대폭 간소화하여 업무 효율성을 극대화했습니다.</span>
                 </li>
                 <li>
-                    <a href="https://taehyung.cloud/seo/" target="_blank">페이지랭크 기반 SEO 최적화 엔진 ↗</a>
-                    <span class="description">구글 검색엔진의 핵심인 페이지랭크(PageRank) 알고리즘을 분석하고, 이를 검색 엔진 최적화(SEO) 전략에 접목한 프로젝트입니다. 웹페이지 간의 연결 구조를 수학적으로 모델링하여 사이트의 구조적 가치를 극대화하고 노출 순위를 높이는 솔루션을 개발했습니다.</span>
-                </li>
-                <li>
                     <a href="https://taehyung.cloud/invest/" target="_blank">주식 WTS (웹 트레이딩 시스템) ↗</a>
                     <span class="description">Cursor AI의 등장으로 개발 프로세스가 혁신되는 것에서 영감을 받아 시작한 프로젝트입니다. 현재 어도비나 비주얼 스튜디오 코드 등 전 산업에 걸쳐 에이전트와 사람이 협업하는 일하는 방식의 변화가 일어나는 것에 주목하여, 이를 주식 거래에 적용했습니다. 복잡한 데이터 분석과 주식 투자 판단을 AI 에이전트의 어시스트를 받아 스마트하게 수행할 수 있는 차세대 웹 트레이딩 시스템을 구축했습니다.</span>
+                </li>
+                <!-- 💡 단순 학습용/참고용 링크가 필요하다면 아래처럼 추가하실 수 있습니다. 필요 없으시면 이 <li> 블록 전체를 지우셔도 됩니다. -->
+                <li>
+                    <a href="http://infolab.stanford.edu/~backrub/google.html" target="_blank">The Anatomy of a Search Engine ↗</a>
+                    <span class="description">구글 검색엔진의 모태가 된 초기 PageRank 알고리즘 논문입니다. 대규모 데이터 구조의 연결성을 모델링하는 방식을 이해하고 학습하기 위해 참고한 자료입니다.</span>
                 </li>
             </ul>
         </section>
