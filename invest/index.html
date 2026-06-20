@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phi-ting | 주식, 이제 물어보면서 하세요</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-sub);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .btn-sm {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* 메인 컨테이너 */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* 히어로 섹션 */
+        .badge {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-desc {
+            color: var(--text-sub);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .hero-subdesc {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .btn-lg {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--text-sub);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* 중앙 강조 박스 */
+        .mid-banner {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            font-size: 15px;
+            color: var(--text-sub);
+        }
+
+        .mid-banner strong {
+            color: var(--text-main);
+        }
+
+        /* 3열 카드 섹션 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.5;
+        }
+
+        /* 안내 문구 */
+        .info-bar {
+            background-color: #f1f5f9;
+            color: #64748b;
+            font-size: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+        }
+
+        /* 하단 멤버 모집 배너 */
+        .bottom-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 48px 20px;
+            border-radius: 16px;
+            margin-bottom: 80px;
+        }
+
+        .bottom-banner h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .btn-white {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* 푸터 */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            font-size: 11px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        /* 모바일 반응형 처리 */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">phi-ting</a>
+        <div class="nav-right">
+            <a href="#" class="nav-link">로그인</a>
+            <a href="#" class="btn-sm">베타 신청</a>
+        </div>
+    </header>
+
+    <main>
+        <span class="badge">알파 테스터 모집 중</span>
+        <h1>주식, 이제 물어보면서 하세요</h1>
+        <p class="hero-desc">차트 보다가 궁금하면 그냥 물어보세요. AI가 근거와 위험까지 정리해 답합니다.</p>
+        <p class="hero-subdesc">주문은 늘 당신이 직접 확인하고 누릅니다.</p>
+
+        <div class="cta-group">
+            <a href="#" class="btn-lg btn-primary">베타 신청하기</a>
+            <a href="#" class="btn-lg btn-secondary">더 알아보기</a>
+        </div>
+
+        <div class="mid-banner">
+            종목 하나 판단하려고 차트, 뉴스, 재무, 수급을 창 여러 개 띄워놓고 보신 적 있죠. <strong>phi-ting은<br>그걸 한 화면에서, 대화로 끝냅니다.</strong>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>물어보면 답합니다</h3>
+                <p>"삼성전자 어때?" — 요약·근거·위험·대안을 카드로 정리해줍니다.</p>
+            </div>
+            <div class="card">
+                <h3>말로 종목을 찾습니다</h3>
+                <p>"PER 10 이하에 외국인 매수 상위" — 조건을 말하면 결과가 카드로 나옵니다.</p>
+            </div>
+            <div class="card">
+                <h3>판단은 돕고, 실행은 안 합니다</h3>
+                <p>AI는 혼자 주문하지 않아요. 마지막 클릭은 항상 당신 몫입니다.</p>
+            </div>
+        </div>
+
+        <div class="info-bar">
+            키는 암호화되어 저장되고, 모든 AI 행동은 기록됩니다. AI는 주문·결제·계정 정보에 손대지 못하게 설계되었습니다.
+        </div>
+
+        <div class="bottom-banner">
+            <h2>먼저 써볼 초기 멤버를 모십니다</h2>
+            <a href="#" class="btn-white">베타 신청하기</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">투자 유의사항</a>
+        </div>
+        <p>phi-ting은 투자 판단을 보조하는 도구이며, 투자 결과에 대한 책임은 이용자 본인에게 있습니다.</p>
+    </footer>
+
+</body>
+</html>
