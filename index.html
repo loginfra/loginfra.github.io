@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트 링크</title>
+    <title>김태형 | 포트폴리오 & 프로젝트</title>
     <!-- 눈누 프리텐다드 폰트 적용 (깔끔하고 세련된 서체) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>
@@ -12,7 +12,7 @@
             background-color: #ffffff; /* 흰색 배경 */
             color: #111111; /* 깊은 검정색 글씨 */
             margin: 0;
-            padding: 60px 20px;
+            padding: 80px 20px;
             display: flex;
             justify-content: center;
         }
@@ -20,15 +20,42 @@
             max-width: 650px;
             width: 100%;
         }
-        h1 {
-            font-size: 28px;
+        
+        /* 자기소개 섹션 스타일 */
+        .intro-section {
+            margin-bottom: 50px;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111111;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+        }
+        .headline {
+            font-size: 16px;
+            font-weight: 500;
+            color: #0066cc; /* 링크드인 헤드라인처럼 전문적인 블루 톤 */
+            margin: 0 0 20px 0;
+        }
+        .bio {
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.7;
+            margin: 0;
+            word-break: keep-all;
+        }
+
+        /* 프로젝트 섹션 스타일 */
+        h2 {
+            font-size: 20px;
             font-weight: 700;
             color: #111111;
             margin-top: 0;
-            margin-bottom: 30px;
-            padding-bottom: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
             border-bottom: 2px solid #eeeeee; /* 부드러운 구분선 */
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
         ul {
             padding-left: 20px;
@@ -36,7 +63,7 @@
             list-style-type: square; /* 단정한 사각형 불릿 형태 */
         }
         li {
-            margin-bottom: 28px; /* 설명이 들어가면서 항목 간 간격을 넓힘 */
+            margin-bottom: 32px; /* 항목 간 충분한 간격 */
             font-size: 16px;
             color: #333333;
         }
@@ -54,27 +81,41 @@
         }
         .description {
             display: block;
-            margin-top: 6px;
+            margin-top: 8px;
             font-size: 14px;
-            color: #555555; /* 가독성이 좋으면서 부드러운 회색조 글씨 */
+            color: #555555; /* 부드러운 회색조 글씨 */
             line-height: 1.6;
             font-weight: 400;
+            word-break: keep-all;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>프로젝트 링크</h1>
-        <ul>
-            <li>
-                <a href="https://woojinchem-ai.com" target="_blank">우진켐 대책보고서 작성</a>
-                <span class="description">(주)우진켐에서 품질관리(QC) 업무를 하며, 불량이 발생한 경우에 작성하는 대책보고서 작성을 간소화 하기 위한 프로그램을 만들었습니다.</span>
-            </li>
-            <li>
-                <a href="https://phiting.vercel.app" target="_blank">주식 WTS(웹 트레이딩 시스템)</a>
-                <span class="description">Cursor ai 가 처음 나왔을 때 코드 작성, 디버깅, 수정 등 다양한 개발 작업을 AI의 도움으로 효율화할 수 있다는 점에 착안해서, 주식 투자도 AI 의 도움을 받아서 할 수 있는 웹 트레이딩 시스템을 만들었습니다.</span>
-            </li>
-        </ul>
+        <!-- 자기소개 섹션 -->
+        <section class="intro-section">
+            <h1 class="name">김태형</h1>
+            <p class="headline">품질관리(QC) 직무 수행 및 AI 활용 생산성 도구 개발자</p>
+            <p class="bio">
+                안녕하세요! 현실의 비효율을 발견하고 이를 IT 기술과 AI를 통해 직접 해결하는 것에 흥미를 느끼는 김태형입니다. 
+                현재 제조업 현장에서 품질관리(QC) 업무의 고도화를 고민하는 동시에, 최신 AI 툴을 적극적으로 활용하여 업무 프로세스를 자동화하고 혁신적인 개인 프로젝트를 빌드해 나가고 있습니다.
+            </p>
+        </section>
+
+        <!-- 프로젝트 링크 섹션 -->
+        <section class="projects-section">
+            <h2>Featured Projects</h2>
+            <ul>
+                <li>
+                    <a href="https://woojinchem-ai.com" target="_blank">우진켐 대책보고서 작성 프로그램 ↗</a>
+                    <span class="description">(주)우진켐에서 품질관리(QC) 업무를 수행하며 경험한 페인 포인트를 해결하기 위해 만들었습니다. 불량이 발생했을 때 반복적이고 복잡했던 대책보고서 작성 과정을 대폭 간소화하여 업무 효율성을 극대화했습니다.</span>
+                </li>
+                <li>
+                    <a href="https://phiting.vercel.app" target="_blank">주식 WTS (웹 트레이딩 시스템) ↗</a>
+                    <span class="description">Cursor AI의 등장으로 개발 프로세스가 혁신되는 것에서 영감을 받아 시작한 프로젝트입니다. 코드 작성과 디버깅을 AI가 돕듯, 복잡한 데이터 분석과 주식 투자 판단 역시 AI의 어시스트를 받아 스마트하게 수행할 수 있는 웹 트레이딩 시스템을 구축했습니다.</span>
+                </li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
