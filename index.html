@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김태형 | 포트폴리오 & 프로젝트</title>
-    <!-- 눈누 프리텐다드 폰트 적용 (깔끔하고 세련된 서체) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>
         body {
@@ -37,12 +36,26 @@
             color: #0066cc; /* 링크드인 헤드라인처럼 전문적인 블루 톤 */
             margin: 0 0 20px 0;
         }
+        /* .bio {
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.7;
+            margin: 0;
+            word-break: keep-all;
+        } */
         .bio {
             font-size: 15px;
             color: #444444;
             line-height: 1.7;
             margin: 0;
             word-break: keep-all;
+            text-align: justify; /* 👈 양끝 정렬을 적용하여 직사각형 모양으로 만들어줍니다 */
+        }
+        .bio p {
+            margin: 0 0 16px 0;
+        }
+        .bio p:last-child {
+            margin-bottom: 0;
         }
 
         /* 프로젝트 섹션 스타일 */
@@ -78,40 +91,45 @@
             text-decoration: none;
             border-bottom: 1px solid #004499; /* 마우스 올렸을 때만 밑줄 */
         }
+        /* 2. 프로젝트 설명글 섹션 정렬 */
         .description {
             display: block;
             margin-top: 8px;
             font-size: 14px;
-            color: #555555; /* 부드러운 회색조 글씨 */
+            color: #555555;
             line-height: 1.6;
             font-weight: 400;
-            word-break: keep-all;
+            text-align: justify;   /* 👈 양끝 정렬 추가 */
+            word-break: break-all; /* 👈 끝선을 완벽한 직사각형으로 맞춤 */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 자기소개 섹션 -->
         <section class="intro-section">
             <h1 class="name">김태형</h1>
             <p class="headline">품질관리(QC) 직무 수행 및 AI 활용 생산성 도구 개발자</p>
-            <p class="bio">
-                안녕하세요! 현실의 비효율을 발견하고 이를 IT 기술과 AI를 통해 직접 해결하는 것에 흥미를 느끼는 김태형입니다. 
-                현재 제조업 현장에서 품질관리(QC) 업무의 고도화를 고민하는 동시에, 최신 AI 툴을 적극적으로 활용하여 업무 프로세스를 자동화하고 혁신적인 개인 프로젝트를 빌드해 나가고 있습니다.
-            </p>
+            <div class="bio">
+                <p>
+                    그라비어 인쇄는 동판에 미세한 홈을 내고 잉크를 채워 찍어내는 대표적인 오목판 인쇄 방식으로, 초기에 고가의 금속판(동판) 제작 비용이 들지만 뛰어난 품질과 내구성을 바탕으로 대량 생산에 압도적인 강점을 가진 기술입니다. 특히 포장재 인쇄의 경우 우리가 일상에서 접하는 과자 봉지나 비닐, 공산품 패키징 등을 분당 최대 200m에 달하는 고속으로 대량 찍어내는 핵심 공정으로 활용되고 있습니다. 다만 속도 위주의 세팅에서는 미세한 환경 변화로도 인쇄 품질 저하가 발생하기 쉽고 고가의 동판 관리와 물리적 변수 제어가 까다로운 만큼, 공정 내 불량 원인을 실시간으로 진단하고 예방하는 체계적인 품질관리(QC)의 중요성이 매우 높은 분야입니다.
+                </p>
+            </div>
         </section>
 
-        <!-- 프로젝트 링크 섹션 -->
         <section class="projects-section">
             <h2>Featured Projects</h2>
             <ul>
                 <li>
                     <a href="https://woojinchem-ai.com" target="_blank">우진켐 대책보고서 작성 프로그램 ↗</a>
-                    <span class="description">(주)우진켐에서 품질관리(QC) 업무를 수행하며 경험한 페인 포인트를 해결하기 위해 만들었습니다. 불량이 발생했을 때 반복적이고 복잡했던 대책보고서 작성 과정을 대폭 간소화하여 업무 효율성을 극대화했습니다.</span>
+                    <span class="description">(주)우진켐에서 품질관리(QC) 업무를 수행하며 경험한 페인 포인트를 해결하기 위해 만들었습니다. 정밀한 제어가 필요한 그라비어 인쇄 포장재 공정에서 불량이 발생했을 때 반복적이고 복잡했던 대책보고서 작성 과정을 대폭 간소화하여 업무 효율성을 극대화했습니다.</span>
+                </li>
+                <li>
+                    <a href="https://taehyung.cloud/seo/" target="_blank">페이지랭크 기반 SEO 최적화 엔진 ↗</a>
+                    <span class="description">구글 검색엔진의 핵심인 페이지랭크(PageRank) 알고리즘을 분석하고, 이를 검색 엔진 최적화(SEO) 전략에 접목한 프로젝트입니다. 웹페이지 간의 연결 구조를 수학적으로 모델링하여 사이트의 구조적 가치를 극대화하고 노출 순위를 높이는 솔루션을 개발했습니다.</span>
                 </li>
                 <li>
                     <a href="https://taehyung.cloud/invest/" target="_blank">주식 WTS (웹 트레이딩 시스템) ↗</a>
-                    <span class="description">Cursor AI의 등장으로 개발 프로세스가 혁신되는 것에서 영감을 받아 시작한 프로젝트입니다. 코드 작성과 디버깅을 AI가 돕듯, 복잡한 데이터 분석과 주식 투자 판단 역시 AI의 어시스트를 받아 스마트하게 수행할 수 있는 웹 트레이딩 시스템을 구축했습니다.</span>
+                    <span class="description">Cursor AI의 등장으로 개발 프로세스가 혁신되는 것에서 영감을 받아 시작한 프로젝트입니다. 현재 어도비나 비주얼 스튜디오 코드 등 전 산업에 걸쳐 에이전트와 사람이 협업하는 일하는 방식의 변화가 일어나는 것에 주목하여, 이를 주식 거래에 적용했습니다. 복잡한 데이터 분석과 주식 투자 판단을 AI 에이전트의 어시스트를 받아 스마트하게 수행할 수 있는 차세대 웹 트레이딩 시스템을 구축했습니다.</span>
                 </li>
             </ul>
         </section>
