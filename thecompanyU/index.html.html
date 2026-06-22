@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE COMPANY U | 2026 사업계획 및 글로벌 전략</title>
+    <style>
+        :root {
+            --primary-color: #3A5A40;
+            --primary-light: #588157;
+            --accent-color: #A3B18A;
+            --bg-light: #F8F9FA;
+            --text-dark: #2F3E46;
+            --text-muted: #6C757D;
+            --border-color: #E9ECEF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ECEFF1 0%, #F4F6F7 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(163,177,138,0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Section Global Layout */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Info Grid */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .overview-card {
+            background-color: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .overview-card h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .overview-card p {
+            font-size: 14px;
+            color: #4A5568;
+        }
+
+        /* Roadmap Timeline */
+        .roadmap {
+            background-color: var(--bg-light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--accent-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: #ffffff;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left { left: 0; text-align: right; }
+        .right { left: 50%; }
+        .right::after { left: -8px; }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #ffffff;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-year {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-phase {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 6px;
+        }
+
+        /* Brand Cards */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .brand-card {
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .brand-header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .brand-header h3 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand-header p {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .brand-body {
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .brand-desc {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #F1F5F9;
+            color: #475569;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* Global Status Table */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 16px;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--bg-light);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .status-complete { background-color: #E2F0D9; color: #385723; }
+        .status-progress { background-color: #FFF2CC; color: #7F6000; }
+
+        /* IR Section Financials */
+        .ir-section {
+            background-color: #F8F9FA;
+        }
+
+        .financial-summary {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .metric-box {
+            padding: 20px;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .metric-box span {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .metric-box strong {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            padding: 40px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+
+        .footer-text {
+            color: #94A3B8;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .left { text-align: left; }
+            .left::after, .right::after { left: 23px; }
+            .hero h1 { font-size: 28px; }
+            .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">THE COMPANY U</div>
+            <ul class="nav-links">
+                <li><a href="#overview">개요</a></li>
+                <li><a href="#roadmap">로드맵</a></li>
+                <li><a href="#brands">운영 브랜드</a></li>
+                <li><a href="#global">글로벌 현황</a></li>
+                <li><a href="#ir">IR 투자 정보</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="overview">
+        <div class="container">
+            <span class="badge">K-Beauty Global Pioneer</span>
+            <h1>글로벌 프리미엄 뷰티·헬스케어의 미래<br>더컴퍼니유</h1>
+            <p>더컴퍼니유(The Company U)는 프리미엄 뷰티, 헬스케어 및 반려동물 화장품 브랜드를 세계 시장에 유통하는 K-뷰티 전문 기업입니다. 설립 직후 주요 글로벌 인증을 완료하고 세계 4대 박람회에 참가하며 빠르게 입지를 넓히고 있습니다.</p>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>설립 및 인증</h3>
+                    <p>2024년 설립 후 단기간 내 FDA(미국), CPNP(유럽) 등 글로벌 주요국 인증을 완료하며 신뢰도 높은 인프라를 확보했습니다.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>멀티채널 D2C</h3>
+                    <p>자사몰, 네이버, 쿠팡, 현대홈쇼핑Hmall 및 아마존을 포함한 온·오프라인 전방위 글로벌 유통망을 구축하고 있습니다.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>스케일업 목표</h3>
+                    <p>2025년의 매출 기반 안정화를 발판 삼아, 향후 5년 내 기업가치 70억 원 이상의 견고한 스케일업을 목표로 합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-title">
+                <h2>3개년 글로벌 성장 로드맵</h2>
+                <p>Landing에서 Expand 단계까지 이어지는 견고한 글로벌 확장 시나리오</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-phase">LANDING (기반 구축)</div>
+                        <ul>
+                            <li>더컴퍼니유 법인 설립 및 여성기업 인증</li>
+                            <li>Dr.Frenshea 반려동물 화장품 제품 런칭</li>
+                            <li>Multi-Gyn 여성청결제 여성병원 납품 및 온라인 판매</li>
+                            <li>반려동물 보호소 기부 정기 활동 개시</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-phase">GEARING UP (가속화)</div>
+                        <ul>
+                            <li>NILONICA(닐로니카) 프리미엄 스킨케어 브랜드 런칭</li>
+                            <li>일본·베트남·태국·미국 식약처 및 FDA 인증 진행</li>
+                            <li>러시아 시장 첫 수출 달성 (15만 불 규모)</li>
+                            <li>신제품 크라우드펀딩 800% 초과 달성</li>
+                            <li>뉴욕, 말레이시아 등 주요 글로벌 전시회 참가</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-phase">EXPAND (구조 완성)</div>
+                        <ul>
+                            <li><strong>당해년도 연간 매출 목표 10억 원 달성</strong></li>
+                            <li>러시아·미국·중국 등 핵심 거점 시장 본격 확대</li>
+                            <li>아마존, 쇼피 등 글로벌 e-커머스 플랫폼 확장</li>
+                            <li>국내 대형 유통 채널 및 면세점·백화점 입점 추진</li>
+                            <li>연 4회 글로벌 B2B 전문 전시회 참가</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands">
+        <div class="container">
+            <div class="section-title">
+                <h2>핵심 브랜드 포트폴리오</h2>
+                <p>시장의 문제를 해결하고 프리미엄 가치를 전달하는 독자 브랜드</p>
+            </div>
+            
+            <div class="brand-grid">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <h3>닐로니카 (NILONICA)</h3>
+                        <p>Premium Botanical Skincare</p>
+                    </div>
+                    <div class="brand-body">
+                        <p class="brand-desc">아프리카 나일강 근처의 특별한 원료를 저온 압착 방식으로 추출하여 완성한 고보습 스킨케어 브랜드입니다.</p>
+                        <div class="product-tags">
+                            <span class="tag">시어 50 고보습 케어밤</span>
+                            <span class="tag">시어 25 데일리 페이스크림</span>
+                            <span class="tag">시어 25 보타닉 핸드크림</span>
+                            <span class="tag">시어 10 바디버터</span>
+                            <span class="tag">립케어 (출시 예정)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <h3>닥터 프렌시아 (Dr. Frenshea)</h3>
+                        <p>Expert Pet Skincare</p>
+                    </div>
+                    <div class="brand-body">
+                        <p class="brand-desc">서울대 동물병원장 황철용 교수와 공동 개발한 반려견 전문 스킨케어 브랜드로, 전 성분 EWG 그린 등급과 특허 출원 '4Care-Complex'를 보유하고 있습니다.</p>
+                        <div class="product-tags">
+                            <span class="tag">시어버터 샴푸</span>
+                            <span class="tag">시어버터 풋클렌저</span>
+                            <span class="tag">투페이즈 미스트</span>
+                            <span class="tag">수의사협회 입점</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <h3>멀티진 (Multi-Gyn)</h3>
+                        <p>Y-Zone Women Care</p>
+                    </div>
+                    <div class="brand-body">
+                        <p class="brand-desc">알로에를 주원료로 하는 자연 친화적 Y존 전문 케어 브랜드입니다. 뛰어난 제품력을 기반으로 국내 산부인과 및 여성병원에서 오랜 기간 사용 및 공급되고 있습니다.</p>
+                        <div class="product-tags">
+                            <span class="tag">여성 청결제</span>
+                            <span class="tag">여성병원 납품</span>
+                            <span class="tag">자연 유래 알로에 베이스</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="global" class="roadmap">
+        <div class="container">
+            <div class="section-title">
+                <h2>글로벌 진출 및 인증 현황</h2>
+                <p>전 세계 주요 뷰티 박람회 참가 및 국가별 규제 인증 완료 리스트</p>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>국가 (Country)</th>
+                            <th>식약처 및 국가 인증</th>
+                            <th>상표권 현황</th>
+                            <th>주요 유통 및 공급 현황</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>대한민국</strong></td>
+                            <td><span class="status-badge status-complete">식약처 인증 완료</span></td>
+                            <td>등록 완료</td>
+                            <td>온라인 채널, 인천공항면세점 입점 완료</td>
+                        </tr>
+                        <tr>
+                            <td><strong>미국 (US)</strong></td>
+                            <td><span class="status-badge status-complete">MOCRA, FDA Reg 완료</span></td>
+                            <td>출원 완료</td>
+                            <td>아마존 브랜드 스토어 구축 및 B2B 채널 운영</td>
+                        </tr>
+                        <tr>
+                            <td><strong>러시아 (RUSSIA)</strong></td>
+                            <td><span class="status-badge status-complete">러시아 등록 완료</span></td>
+                            <td>출원 완료</td>
+                            <td>현지 공급 진행 중 (15만 불 규모 수출 계약 완료)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>일본 (JAPAN)</strong></td>
+                            <td><span class="status-badge status-complete">후생성 등록 완료</span></td>
+                            <td>등록 완료</td>
+                            <td>라쿠텐, 아마존재팬 및 오프라인 스토어 진출 모색</td>
+                        </tr>
+                        <tr>
+                            <td><strong>유럽 (EUROPE)</strong></td>
+                            <td><span class="status-badge status-complete">CPNP 인증 완료</span></td>
+                            <td>출원 완료</td>
+                            <td>유럽 현지 오프라인 채널 유통 프로세스 진행</td>
+                        </tr>
+                        <tr>
+                            <td><strong>중동 (UAE/사우디)</strong></td>
+                            <td>정부 해외 지원 연계 진행</td>
+                            <td>인증 진행 중</td>
+                            <td>거점 상설 홍보관 'KOREA 360' K-Beauty 섹션 진출 예정</td>
+                        </tr>
+                        <tr>
+                            <td><strong>중국 (CHINA)</strong></td>
+                            <td><span class="status-badge status-progress">NMPA 진행 중</span></td>
+                            <td>출원 완료</td>
+                            <td>온라인 및 오프라인 진출 타겟 라인 확보</td>
+                        </tr>
+                        <tr>
+                            <td><strong>동남아 (베트남/태국)</strong></td>
+                            <td><span class="status-badge status-complete">FDA 인증 완료</span></td>
+                            <td>출원 완료</td>
+                            <td>베트남(온라인 쇼핑몰), 태국(오프라인 쇼핑몰) 진출</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="ir" class="ir-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Investor Relations (IR)</h2>
+                <p>현금흐름할인법(DCF) 기반 합리적 기업가치 산정 및 재무 전망</p>
+            </div>
+            
+            <div class="financial-summary">
+                <p>더컴퍼니유는 초기 글로벌 인프라 구축 단계를 지나, D2C 매출 비중 확대를 통해 강력한 영업이익률 성장을 도모하고 있습니다. 2024년 실적을 기준으로 향후 5개년 고성장 시나리오를 반영한 주요 지표는 아래와 같습니다.</p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <span>2024년 실제 매출</span>
+                        <strong>9,100만 원</strong>
+                    </div>
+                    <div class="metric-box">
+                        <span>2026년 목표 매출</span>
+                        <strong>13억 원</strong>
+                    </div>
+                    <div class="metric-box">
+                        <span>2029년 추정 매출</span>
+                        <strong>75억 원</strong>
+                    </div>
+                    <div class="metric-box">
+                        <span>최종 산정 기업영업가치</span>
+                        <strong>약 75.4억 원</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>주요 재무 지표 (단위: 만 원)</th>
+                            <th>2024년 (실적)</th>
+                            <th>2025년 (추정)</th>
+                            <th>2026년 (추정)</th>
+                            <th>2027년 (추정)</th>
+                            <th>2028년 (추정)</th>
+                            <th>2029년 (추정)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>목표 매출액</strong></td>
+                            <td>9,100</td>
+                            <td>50,000</td>
+                            <td>130,000</td>
+                            <td>270,000</td>
+                            <td>480,000</td>
+                            <td>750,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>영업이익</strong></td>
+                            <td>-222</td>
+                            <td>2,500</td>
+                            <td>20,000</td>
+                            <td>46,000</td>
+                            <td>87,000</td>
+                            <td>146,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>영업현금흐름 (FCF)</strong></td>
+                            <td>-</td>
+                            <td>-400</td>
+                            <td>12,700</td>
+                            <td>33,850</td>
+                            <td>69,600</td>
+                            <td>119,600</td>
+                        </tr>
+                        <tr>
+                            <td><strong>현재가치 (PV, 할인율 12.5%)</strong></td>
+                            <td>-</td>
+                            <td>-356</td>
+                            <td>10,030</td>
+                            <td>23,774</td>
+                            <td>43,451</td>
+                            <td>66,363</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <div class="footer-logo">THE COMPANY U</div>
+                <p class="footer-text" style="margin-top: 5px;">Global Premium Beauty & Healthcare Brand Distributor</p>
+            </div>
+            <div class="footer-text">
+                <p>© 2026 THE COMPANY U. All rights reserved.</p>
+                <p style="font-size: 11px; opacity: 0.6; margin-top: 4px;">본 페이지의 재무 정보 및 전망치는 2024년 실적을 기준으로 산정된 고성장 시나리오 추정치입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
