@@ -275,6 +275,13 @@
             transform: translateY(-5px);
         }
 
+        a.brand-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
         .brand-header {
             background-color: var(--primary-color);
             color: #ffffff;
@@ -366,6 +373,77 @@
 
         .status-complete { background-color: #E2F0D9; color: #385723; }
         .status-progress { background-color: #FFF2CC; color: #7F6000; }
+
+        /* Certifications & Awards */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .cert-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .cert-card h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .cert-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .cert-card p {
+            font-size: 14px;
+            color: #4A5568;
+            margin-bottom: 14px;
+        }
+
+        .cert-meta {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cert-meta li strong {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-right: 6px;
+        }
 
         /* Footer */
         footer {
@@ -703,6 +781,7 @@
                 <li><a href="#bi">브랜드 BI</a></li>
                 <li><a href="#brands">운영 브랜드</a></li>
                 <li><a href="#activity">글로벌 활동</a></li>
+                <li><a href="#certifications">인증 및 수상</a></li>
                 <li><a href="#global">글로벌 현황</a></li>
             </ul>
         </div>
@@ -885,7 +964,7 @@
             </div>
             
             <div class="brand-grid">
-                <div class="brand-card">
+                <a class="brand-card" href="https://www.nilonica.com/" target="_blank" rel="noopener">
                     <div class="brand-header">
                         <div class="brand-logo-chip"><img src="nilonica_logo.png" alt="NILONICA"></div>
                         <h3>닐로니카 (NILONICA)</h3>
@@ -901,9 +980,9 @@
                             <span class="tag">멜팅버터 립케어 (출시 예정)</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="brand-card">
+                <a class="brand-card" href="https://frenshea.net/" target="_blank" rel="noopener">
                     <div class="brand-header">
                         <div class="brand-logo-chip"><img src="frenshea_logo.png" alt="Dr. Frenshea"></div>
                         <h3>닥터 프렌시아 (Dr. Frenshea)</h3>
@@ -918,9 +997,9 @@
                             <span class="tag">수의사장터 입점</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="brand-card">
+                <a class="brand-card" href="https://smartstore.naver.com/thecompanyu/category/e571ea2e177743999f5c28b38a281cb8?cp=1" target="_blank" rel="noopener">
                     <div class="brand-header">
                         <div class="brand-logo-chip"><img src="multigyn_logo.png" alt="Multi-Gyn"></div>
                         <h3>멀티진 (Multi-Gyn)</h3>
@@ -934,7 +1013,7 @@
                             <span class="tag">자연 유래 알로에 베이스</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1011,6 +1090,40 @@
         </div>
     </section>
 
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>인증 및 수상</h2>
+                <p>더컴퍼니유의 기술력과 제품 경쟁력을 인정받은 주요 인증 및 수상 내역</p>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🏛️</div>
+                    <h3>벤처기업인증</h3>
+                    <span class="cert-date">유효기간 2025.03.18 &ndash; 2028.03.17</span>
+                    <p>「벤처기업육성에 관한 특별법」 제25조에 의거, (사)벤처기업협회로부터 혁신성장유형 벤처기업으로 공식 인증받았습니다.</p>
+                    <ul class="cert-meta">
+                        <li><strong>기업명</strong>주식회사 더컴퍼니유</li>
+                        <li><strong>확인유형</strong>혁신성장유형</li>
+                        <li><strong>발급기관</strong>벤처기업확인기관 ((사)벤처기업협회)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🏆</div>
+                    <h3>공영홈쇼핑 공모전 우수상</h3>
+                    <span class="cert-date">2026.06.25 수상</span>
+                    <p>공영홈쇼핑이 주관한 「2026 제5회 국내 우수 아이디어·혁신기업 제품 공모전」에서 제품 경쟁력을 인정받아 우수상을 수상했습니다.</p>
+                    <ul class="cert-meta">
+                        <li><strong>주관</strong>(주)공영홈쇼핑</li>
+                        <li><strong>후원</strong>중소벤처기업부</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="global" class="roadmap">
         <div class="container">
             <div class="section-title">
@@ -1055,7 +1168,7 @@
                         </tr>
                         <tr>
                             <td><strong>중동 (UAE/사우디)</strong></td>
-                            <td>정부 해외 지원 연계 진행</td>
+                            <td><span class="status-badge status-complete">UAE 인증 완료</span></td>
                             <td>거점 상설 홍보관 'KOREA 360' K-Beauty 섹션 진출 예정</td>
                         </tr>
                         <tr>
