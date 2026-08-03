@@ -162,6 +162,12 @@ background-color: var(--bg-light);
 padding: 30px;
 border-radius: 12px;
 border: 1px solid var(--border-color);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+min-height: 180px;
 }
 
 .overview-card h3 {
@@ -181,6 +187,54 @@ color: #4A5568;
 /* Roadmap Timeline */
 .roadmap {
 background-color: var(--bg-light);
+}
+
+.timeline-summary {
+display: grid;
+gap: 20px;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.timeline-panel {
+background: #ffffff;
+border: 1px solid var(--border-color);
+border-left: 4px solid var(--primary-color);
+border-radius: 14px;
+padding: 24px 28px;
+box-shadow: 0 8px 20px -12px rgba(0,0,0,0.12);
+}
+
+.timeline-panel h3 {
+font-size: 20px;
+font-weight: 800;
+color: var(--primary-color);
+margin-bottom: 14px;
+}
+
+.timeline-panel ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.timeline-panel li {
+position: relative;
+padding-left: 18px;
+font-size: 14px;
+line-height: 1.7;
+color: var(--text-dark);
+}
+
+.timeline-panel li::before {
+content: '•';
+position: absolute;
+left: 0;
+color: var(--primary-light);
+font-weight: 700;
 }
 
 .timeline {
@@ -857,31 +911,37 @@ border-top: 1px solid var(--border-color);
     <p>A solid global expansion scenario spanning from the Landing to the Expand phase</p>
 </div>
 <div class="timeline-summary">
-<h3>2024 - LANDING (Foundation)</h3>
-<ul>
-<li>THE COMPANY U incorporated and certified as a women-owned business</li>
-<li>Launch of Dr.Frenshea pet cosmetics products</li>
-<li>Multi-Gyn feminine wash supplied to women's hospitals and sold online</li>
-<li>Regular donation activities to pet shelters begin</li>
-</ul>
+    <div class="timeline-panel">
+        <h3>2024 - LANDING (Foundation)</h3>
+        <ul>
+            <li>THE COMPANY U incorporated and certified as a women-owned business</li>
+            <li>Launch of Dr.Frenshea pet cosmetics products</li>
+            <li>Multi-Gyn feminine wash supplied to women's hospitals and sold online</li>
+            <li>Regular donation activities to pet shelters begin</li>
+        </ul>
+    </div>
 
-<h3>2025 - GEARING UP (Acceleration)</h3>
-<ul>
-<li>Launch of NILONICA premium skincare brand</li>
-<li>Regulatory registration and FDA certification progressing in Japan, Vietnam, Thailand, and the US</li>
-<li>First export achieved to the Russian market</li>
-<li>New product crowdfunding exceeds 800% of target</li>
-<li>Participation in major global exhibitions including New York, Japan, Las Vegas, and France</li>
-</ul>
+    <div class="timeline-panel">
+        <h3>2025 - GEARING UP (Acceleration)</h3>
+        <ul>
+            <li>Launch of NILONICA premium skincare brand</li>
+            <li>Regulatory registration and FDA certification progressing in Japan, Vietnam, Thailand, and the US</li>
+            <li>First export achieved to the Russian market</li>
+            <li>New product crowdfunding exceeds 800% of target</li>
+            <li>Participation in major global exhibitions including New York, Japan, Las Vegas, and France</li>
+        </ul>
+    </div>
 
-<h3>2026 - EXPAND (Structural Completion)</h3>
-<ul>
-<li><strong>Securing revenue momentum for global expansion and structural growth</strong></li>
-<li>Full-scale expansion into key markets including Russia, the US, and China</li>
-<li>Expansion into global e-commerce platforms such as Amazon and Shopee</li>
-<li>Pursuing entry into major domestic retail channels, duty-free shops, and department stores</li>
-<li>Participation in global B2B trade exhibitions four times a year</li>
-</ul>
+    <div class="timeline-panel">
+        <h3>2026 - EXPAND (Structural Completion)</h3>
+        <ul>
+            <li><strong>Securing revenue momentum for global expansion and structural growth</strong></li>
+            <li>Full-scale expansion into key markets including Russia, the US, and China</li>
+            <li>Expansion into global e-commerce platforms such as Amazon and Shopee</li>
+            <li>Pursuing entry into major domestic retail channels, duty-free shops, and department stores</li>
+            <li>Participation in global B2B trade exhibitions four times a year</li>
+        </ul>
+    </div>
 </div>
 
 </div>
@@ -1032,6 +1092,18 @@ border-top: 1px solid var(--border-color);
 </div>
 
 <div class="cert-grid">
+    <div class="cert-card">
+        <div class="cert-icon">👩</div>
+        <h3>Women-Owned Business Certification</h3>
+        <span class="cert-date">Certified 2024</span>
+        <p>Recognized as a women-owned business, reflecting the company’s commitment to diversity, inclusive leadership, and sustainable growth in the global beauty and healthcare market.</p>
+        <ul class="cert-meta">
+            <li><strong>Company</strong>THE COMPANY U Co., Ltd.</li>
+            <li><strong>Focus</strong>Diversity & Inclusive Ownership</li>
+            <li><strong>Value</strong>Women-led Growth and Social Impact</li>
+        </ul>
+    </div>
+
     <div class="cert-card">
         <div class="cert-icon">🏛️</div>
         <h3>Venture Business Certification</h3>
