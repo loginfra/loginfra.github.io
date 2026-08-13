@@ -1,0 +1,1398 @@
+<!-- english version -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE COMPANY U</title>
+<style>
+:root {
+--primary-color: #3A5A40;
+--primary-light: #588157;
+--accent-color: #A3B18A;
+--bg-light: #F8F9FA;
+--text-dark: #2F3E46;
+--text-muted: #6C757D;
+--border-color: #E9ECEF;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+color: var(--text-dark);
+background-color: #ffffff;
+line-height: 1.6;
+}
+
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* Header */
+header {
+background-color: #ffffff;
+border-bottom: 1px solid var(--border-color);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.header-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 70px;
+}
+
+.logo {
+font-size: 20px;
+font-weight: 800;
+letter-spacing: 2px;
+color: var(--primary-color);
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 24px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: var(--text-dark);
+font-size: 14px;
+font-weight: 500;
+transition: color 0.2s;
+}
+
+.nav-links a:hover {
+color: var(--primary-light);
+}
+
+/* Hero Section */
+.hero {
+background: linear-gradient(135deg, #ECEFF1 0%, #F4F6F7 100%);
+padding: 80px 0;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -20%;
+width: 600px;
+height: 600px;
+background: radial-gradient(circle, rgba(163,177,138,0.2) 0%, rgba(255,255,255,0) 70%);
+border-radius: 50%;
+}
+
+.badge {
+display: inline-block;
+background-color: var(--primary-color);
+color: #ffffff;
+font-size: 12px;
+font-weight: 600;
+padding: 6px 16px;
+border-radius: 50px;
+margin-bottom: 16px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.hero h1 {
+font-size: 38px;
+font-weight: 800;
+color: var(--primary-color);
+line-height: 1.3;
+margin-bottom: 20px;
+}
+
+.hero p {
+font-size: 16px;
+color: var(--text-muted);
+max-width: 700px;
+margin: 0 auto 30px auto;
+}
+
+/* Section Global Layout */
+section {
+padding: 80px 0;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.section-title h2 {
+font-size: 28px;
+font-weight: 700;
+color: var(--primary-color);
+margin-bottom: 10px;
+}
+
+.section-title p {
+color: var(--text-muted);
+font-size: 15px;
+}
+
+/* Info Grid */
+.overview-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+margin-top: 40px;
+text-align: center;
+}
+
+.overview-card {
+background-color: var(--bg-light);
+padding: 30px;
+border-radius: 12px;
+border: 1px solid var(--border-color);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+min-height: 180px;
+}
+
+.overview-card h3 {
+font-size: 18px;
+color: var(--primary-color);
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.overview-card p {
+font-size: 14px;
+color: #4A5568;
+}
+
+/* Roadmap Timeline */
+.roadmap {
+background-color: var(--bg-light);
+}
+
+.timeline-summary {
+display: grid;
+gap: 20px;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.timeline-panel {
+background: #ffffff;
+border: 1px solid var(--border-color);
+border-left: 4px solid var(--primary-color);
+border-radius: 14px;
+padding: 24px 28px;
+box-shadow: 0 8px 20px -12px rgba(0,0,0,0.12);
+}
+
+.timeline-panel h3 {
+font-size: 20px;
+font-weight: 800;
+color: var(--primary-color);
+margin-bottom: 14px;
+}
+
+.timeline-panel ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.timeline-panel li {
+position: relative;
+padding-left: 18px;
+font-size: 14px;
+line-height: 1.7;
+color: var(--text-dark);
+}
+
+.timeline-panel li::before {
+content: '•';
+position: absolute;
+left: 0;
+color: var(--primary-light);
+font-weight: 700;
+}
+
+.timeline {
+position: relative;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.timeline::after {
+content: '';
+position: absolute;
+width: 2px;
+background-color: var(--accent-color);
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -1px;
+}
+
+.timeline-item {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
+
+.timeline-item::after {
+content: '';
+position: absolute;
+width: 16px;
+height: 16px;
+right: -8px;
+background-color: #ffffff;
+border: 4px solid var(--primary-color);
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+.left { left: 0; text-align: right; }
+.right { left: 50%; }
+.right::after { left: -8px; }
+
+.timeline-content {
+padding: 20px 30px;
+background-color: #ffffff;
+position: relative;
+border-radius: 12px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+border: 1px solid var(--border-color);
+}
+
+.timeline-year {
+font-size: 20px;
+font-weight: 800;
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+
+.timeline-phase {
+font-size: 12px;
+font-weight: 700;
+color: var(--primary-light);
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 12px;
+}
+
+.timeline-content ul {
+list-style: none;
+font-size: 14px;
+color: var(--text-dark);
+}
+
+.timeline-content ul li {
+margin-bottom: 6px;
+}
+
+/* Brand Cards */
+.brand-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 30px;
+}
+
+.brand-card {
+border: 1px solid var(--border-color);
+border-radius: 16px;
+overflow: hidden;
+box-shadow: 0 10px 15px -3px rgba(0,0,0,0.02);
+transition: transform 0.3s;
+}
+
+.brand-card:hover {
+transform: translateY(-5px);
+}
+
+a.brand-card {
+display: block;
+text-decoration: none;
+color: inherit;
+cursor: pointer;
+}
+
+.brand-header {
+background-color: var(--primary-color);
+color: #ffffff;
+padding: 24px;
+text-align: center;
+}
+
+.brand-header h3 {
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.brand-header p {
+font-size: 12px;
+opacity: 0.8;
+margin-top: 4px;
+}
+
+.brand-body {
+padding: 30px;
+background-color: #ffffff;
+}
+
+.brand-desc {
+font-size: 14px;
+color: var(--text-dark);
+margin-bottom: 20px;
+padding-bottom: 15px;
+border-bottom: 1px solid var(--border-color);
+}
+
+.product-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+.tag {
+background-color: #F1F5F9;
+color: #475569;
+font-size: 12px;
+padding: 4px 12px;
+border-radius: 6px;
+font-weight: 500;
+}
+
+/* Global Status Table */
+.table-responsive {
+width: 100%;
+overflow-x: auto;
+margin-top: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+border: 1px solid var(--border-color);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+text-align: left;
+font-size: 14px;
+}
+
+th {
+background-color: var(--primary-color);
+color: #ffffff;
+font-weight: 600;
+padding: 14px 16px;
+}
+
+td {
+padding: 14px 16px;
+border-bottom: 1px solid var(--border-color);
+color: var(--text-dark);
+}
+
+tr:nth-child(even) td {
+background-color: var(--bg-light);
+}
+
+.status-badge {
+display: inline-block;
+padding: 2px 8px;
+font-size: 12px;
+border-radius: 4px;
+font-weight: 500;
+}
+
+.status-complete { background-color: #E2F0D9; color: #385723; }
+.status-progress { background-color: #FFF2CC; color: #7F6000; }
+
+/* Certifications & Awards */
+.cert-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 40px;
+}
+
+.cert-card {
+background-color: #ffffff;
+border: 1px solid var(--border-color);
+border-radius: 16px;
+padding: 32px;
+box-shadow: 0 10px 15px -3px rgba(0,0,0,0.02);
+transition: transform 0.3s;
+}
+
+.cert-card:hover {
+transform: translateY(-5px);
+}
+
+.cert-icon {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+background-color: var(--primary-color);
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+margin-bottom: 18px;
+}
+
+.cert-card h3 {
+font-size: 18px;
+color: var(--primary-color);
+margin-bottom: 6px;
+}
+
+.cert-date {
+font-size: 12px;
+color: var(--text-muted);
+font-weight: 600;
+margin-bottom: 14px;
+display: block;
+}
+
+.cert-card p {
+font-size: 14px;
+color: #4A5568;
+margin-bottom: 14px;
+}
+
+.cert-meta {
+list-style: none;
+font-size: 13px;
+color: var(--text-muted);
+display: flex;
+flex-direction: column;
+gap: 6px;
+padding-top: 14px;
+border-top: 1px solid var(--border-color);
+}
+
+.cert-meta li strong {
+color: var(--text-dark);
+font-weight: 600;
+margin-right: 6px;
+}
+
+/* Footer */
+footer {
+background-color: var(--text-dark);
+color: #ffffff;
+padding: 40px 0;
+font-size: 13px;
+border-top: 4px solid var(--primary-color);
+}
+
+.footer-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.footer-logo {
+font-weight: 700;
+letter-spacing: 1px;
+font-size: 16px;
+}
+
+.footer-text {
+color: #94A3B8;
+}
+
+
+.brand-logo-chip {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: #ffffff;
+border-radius: 8px;
+padding: 8px 14px;
+margin-bottom: 10px;
+max-width: 160px;
+}
+.brand-logo-chip img { max-width: 100%; max-height: 28px; object-fit: contain; }
+
+/* Brand Identity Section */
+.bi-section {
+background: linear-gradient(180deg, #ffffff 0%, #FAFBF6 100%);
+}
+
+.bi-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+gap: 32px;
+margin-top: 40px;
+}
+
+.bi-card {
+border: 1px solid var(--border-color);
+border-radius: 20px;
+overflow: hidden;
+background: #ffffff;
+box-shadow: 0 10px 30px -12px rgba(0,0,0,0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+display: flex;
+flex-direction: column;
+}
+
+.bi-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 20px 40px -15px rgba(0,0,0,0.12);
+}
+
+.bi-logo-wrap {
+height: 220px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 40px;
+position: relative;
+}
+
+.bi-logo-wrap.nilonica { background-color: #F8F6E9; }
+.bi-logo-wrap.frenshea { background-color: #FFFFFF; border-bottom: 1px solid var(--border-color); }
+
+.bi-logo-wrap img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
+
+.bi-body {
+padding: 32px;
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+.bi-eyebrow {
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(--primary-light);
+margin-bottom: 8px;
+}
+
+.bi-name {
+font-size: 22px;
+font-weight: 800;
+color: var(--primary-color);
+margin-bottom: 14px;
+}
+
+.bi-desc {
+font-size: 14px;
+color: #4A5568;
+margin-bottom: 20px;
+}
+
+.bi-meta {
+display: flex;
+flex-direction: column;
+gap: 10px;
+border-top: 1px solid var(--border-color);
+padding-top: 18px;
+margin-top: auto;
+}
+
+.bi-meta-row {
+display: flex;
+font-size: 13px;
+gap: 10px;
+}
+
+.bi-meta-label {
+font-weight: 700;
+color: var(--primary-color);
+min-width: 78px;
+}
+
+.bi-meta-value {
+color: #4A5568;
+}
+
+/* Logo in footer/header */
+.header-logo-img { height: 26px; display: block; }
+
+
+/* Company Philosophy Section */
+.philosophy {
+background: linear-gradient(135deg, var(--primary-color) 0%, #2C4733 100%);
+color: #ffffff;
+position: relative;
+overflow: hidden;
+}
+
+.philosophy::before {
+content: '';
+position: absolute;
+top: -30%;
+left: -10%;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(163,177,138,0.25) 0%, rgba(255,255,255,0) 70%);
+border-radius: 50%;
+}
+
+.philosophy .section-title h2 { color: #ffffff; }
+.philosophy .section-title p { color: rgba(255,255,255,0.7); }
+
+.philosophy-quote {
+max-width: 820px;
+margin: 0 auto 56px auto;
+text-align: center;
+position: relative;
+z-index: 1;
+}
+
+.philosophy-quote .mark {
+font-size: 56px;
+line-height: 1;
+color: var(--accent-color);
+font-family: Georgia, serif;
+margin-bottom: 8px;
+}
+
+.philosophy-quote p {
+font-size: 22px;
+font-weight: 300;
+line-height: 1.6;
+}
+
+.philosophy-quote p strong {
+font-weight: 700;
+color: var(--accent-color);
+}
+
+.values-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 24px;
+position: relative;
+z-index: 1;
+}
+
+.value-card {
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 16px;
+padding: 30px 26px;
+backdrop-filter: blur(4px);
+}
+
+.value-num {
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 2px;
+color: var(--accent-color);
+margin-bottom: 12px;
+}
+
+.value-card h3 {
+font-size: 18px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.value-card p {
+font-size: 14px;
+color: rgba(255,255,255,0.78);
+line-height: 1.6;
+}
+
+/* Global Activity (Exhibitions) Section */
+.activity-intro {
+text-align: center;
+max-width: 720px;
+margin: 0 auto 40px auto;
+color: var(--text-muted);
+font-size: 15px;
+}
+
+.exhibition-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 26px;
+}
+
+.exhibition-card {
+border: 1px solid var(--border-color);
+border-radius: 16px;
+overflow: hidden;
+background: #ffffff;
+box-shadow: 0 8px 20px -12px rgba(0,0,0,0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+display: flex;
+flex-direction: column;
+}
+
+.exhibition-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 16px 30px -14px rgba(0,0,0,0.16);
+}
+
+.exhibition-flag {
+height: 6px;
+width: 100%;
+}
+
+.exhibition-body {
+padding: 26px;
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+.exhibition-country {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: var(--primary-light);
+margin-bottom: 10px;
+}
+
+.exhibition-name {
+font-size: 19px;
+font-weight: 800;
+color: var(--primary-color);
+margin-bottom: 8px;
+line-height: 1.35;
+}
+
+.exhibition-meta {
+font-size: 13px;
+color: var(--text-muted);
+margin-bottom: 16px;
+}
+
+.exhibition-desc {
+font-size: 14px;
+color: #4A5568;
+margin-top: auto;
+padding-top: 16px;
+border-top: 1px solid var(--border-color);
+}
+
+.exhibition-flag-emoji { font-size: 14px; }
+
+/* NILONICA Spotlight (Brand Identity) */
+.bi-subtitle {
+text-align: center;
+font-size: 22px;
+font-weight: 800;
+color: var(--primary-color);
+margin: 70px 0 14px 0;
+}
+
+.bi-subtitle-sm {
+text-align: center;
+max-width: 720px;
+margin: 0 auto 36px auto;
+color: var(--text-muted);
+font-size: 15px;
+}
+
+.market-badges {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin-bottom: 34px;
+}
+
+.market-badges .tag {
+background-color: var(--bg-light);
+border: 1px solid var(--border-color);
+color: var(--text-dark);
+font-weight: 600;
+padding: 6px 14px;
+}
+
+.partner-note {
+max-width: 820px;
+margin: 0 auto;
+background-color: var(--bg-light);
+border: 1px solid var(--border-color);
+border-radius: 14px;
+padding: 20px 26px;
+font-size: 14px;
+color: #4A5568;
+}
+
+.partner-note strong { color: var(--primary-color); }
+
+.bi-hero-body .bi-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.bi-hero-body .bi-meta-row { flex-direction: column; gap: 2px; }
+.bi-hero-body .bi-meta-label { min-width: 0; }
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+.timeline::after { left: 31px; }
+.timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+.left { text-align: left; }
+.left::after, .right::after { left: 23px; }
+.hero h1 { font-size: 28px; }
+.header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 10px; }
+.bi-grid { grid-template-columns: 1fr; }
+.bi-logo-wrap { height: 180px; padding: 30px; }
+.values-grid { grid-template-columns: 1fr; }
+.exhibition-grid { grid-template-columns: 1fr; }
+.philosophy-quote p { font-size: 18px; }
+.market-badges { gap: 8px; }
+.bi-hero-body .bi-meta { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container header-inner">
+<div class="logo">THE COMPANY U</div>
+<ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#bi">Brand Identity</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#activity">Global Activity</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#global">Global Status</a></li>
+</ul>
+</div>
+</header>
+
+<section class="hero" id="overview">
+<div class="container">
+<span class="badge">K-Beauty Global Pioneer</span>
+<h1>The Future of Premium Beauty & Healthcare<br>THE COMPANY U</h1>
+<p>THE COMPANY U is a K-beauty specialist distributing premium beauty, healthcare, and pet cosmetics brands to global markets. Shortly after its founding, the company completed major global certifications and is rapidly expanding its presence through participation in the world's four leading trade fairs.</p>
+
+<div class="overview-grid">
+    <div class="overview-card">
+        <h3>Founding & Certifications</h3>
+        <p>Since its founding in 2024, the company has secured a trusted infrastructure by completing key global certifications including FDA (US) and CPNP (Europe) within a short period.</p>
+    </div>
+    <div class="overview-card">
+        <h3>Multichannel D2C</h3>
+        <p>Building a comprehensive online and offline global distribution network including its own mall, Naver, Coupang, Hyundai Hmall, and Amazon.</p>
+    </div>
+    <div class="overview-card">
+        <h3>Scale-up Goal</h3>
+        <p>Built on a stable revenue base and differentiated brand assets, the company aims to grow into a leader in the global beauty and healthcare market.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="philosophy" class="philosophy">
+<div class="container">
+<div class="section-title">
+    <h2>Company Philosophy</h2>
+    <p>How THE COMPANY U meets the world</p>
+</div>
+
+<div class="philosophy-quote">
+    <div class="mark">&ldquo;</div>
+    <p>We create <strong>sustainable beauty</strong> that helps people, pets, and the planet thrive together.<br>Through proven ingredients and genuine care,<br>we bring the value of K-beauty to the world.</p>
+</div>
+
+<div class="values-grid">
+    <div class="value-card">
+        <div class="value-num">01</div>
+        <h3>Proven Safety</h3>
+        <p>Guided by global certifications such as FDA, CPNP, and MOCRA, we place uncompromising safety and quality as our top priority.</p>
+    </div>
+    <div class="value-card">
+        <div class="value-num">02</div>
+        <h3>Expert-driven Development</h3>
+        <p>Through joint research with experts across fields, including the director of Seoul National University's animal hospital, we bring only scientifically substantiated products to market.</p>
+    </div>
+    <div class="value-card">
+        <div class="value-num">03</div>
+        <h3>Care Without Boundaries</h3>
+        <p>From skincare for people to specialized care for pets and women, we embody a philosophy of warm care for every form of life.</p>
+    </div>
+    <div class="value-card">
+        <div class="value-num">04</div>
+        <h3>A Cycle of Giving</h3>
+        <p>Through initiatives such as regular donations to pet shelters, we strive for a virtuous cycle in which brand growth translates into social value.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="roadmap" class="roadmap">
+<div class="container">
+<div class="section-title">
+    <h2>Global Growth Roadmap</h2>
+    <p>A solid global expansion scenario spanning from the Landing to the Expand phase</p>
+</div>
+<div class="timeline-summary">
+    <div class="timeline-panel">
+        <h3>2024 - LANDING (Foundation)</h3>
+        <ul>
+            <li>THE COMPANY U incorporated and certified as a women-owned business</li>
+            <li>Launch of Dr.Frenshea pet cosmetics products</li>
+            <li>Multi-Gyn feminine wash supplied to women's hospitals and sold online</li>
+            <li>Regular donation activities to pet shelters begin</li>
+        </ul>
+    </div>
+
+    <div class="timeline-panel">
+        <h3>2025 - GEARING UP (Acceleration)</h3>
+        <ul>
+            <li>Launch of NILONICA premium skincare brand</li>
+            <li>Regulatory registration and FDA certification progressing in Japan, Vietnam, Thailand, and the US</li>
+            <li>First export achieved to the Russian market</li>
+            <li>New product crowdfunding exceeds 800% of target</li>
+            <li>Participation in major global exhibitions including New York, Japan, Las Vegas, and France</li>
+        </ul>
+    </div>
+
+    <div class="timeline-panel">
+        <h3>2026 - EXPAND (Structural Completion)</h3>
+        <ul>
+            <li><strong>Securing revenue momentum for global expansion and structural growth</strong></li>
+            <li>Full-scale expansion into key markets including Russia, the US, and China</li>
+            <li>Expansion into global e-commerce platforms such as Amazon and Shopee</li>
+            <li>Pursuing entry into major domestic retail channels, duty-free shops, and department stores</li>
+            <li>Participation in global B2B trade exhibitions four times a year</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+</section>
+<section id="bi" class="bi-section">
+<div class="container">
+<div class="section-title">
+    <h2>NILONICA Brand Spotlight</h2>
+    <p>Prestige K-Beauty that delivers pure beauty with Africa's organic shea butter</p>
+</div>
+
+<div class="bi-grid" style="max-width: 900px; margin: 0 auto;">
+    <div class="bi-card">
+        <div class="bi-logo-wrap nilonica">
+            <img src="../nilonica_logo.png" alt="NILONICA">
+        </div>
+        <div class="bi-body bi-hero-body">
+            <div class="bi-eyebrow">Prestige K-Beauty &middot; Naturalist Moisture Solution</div>
+            <div class="bi-name">Pure Beauty, Delivered from the Nile</div>
+            <p class="bi-desc">NILONICA is a premium botanical life&#8209;style Korean skincare brand built around a rare shea species &mdash; found only along the Nile River and making up just 1% of the world's shea supply. Cold&#8209;pressed and organically processed rather than boiled or melted, it is packed at maximum, optimal concentration into every formula, turning nature's finest moisturizer into a naturalist skincare solution for aging, moisture&#8209;seeking skin.</p>
+            <div class="bi-meta">
+                <div class="bi-meta-row">
+                    <span class="bi-meta-label">Certifications</span>
+                    <span class="bi-meta-value">Eco&#8209;cert Organic (France) &middot; USDA Organic &middot; WeVegan</span>
+                </div>
+                <div class="bi-meta-row">
+                    <span class="bi-meta-label">Clinically Proven</span>
+                    <span class="bi-meta-value">Deep moisture, itch relief, skin barrier improvement, skin regeneration, redness improvement</span>
+                </div>
+                <div class="bi-meta-row">
+                    <span class="bi-meta-label">Current Lineup</span>
+                    <span class="bi-meta-value">5 SKUs across 3 shea&#8209;concentration tiers (10% / 25% / 50%)</span>
+                </div>
+                <div class="bi-meta-row">
+                    <span class="bi-meta-label">IP Protection</span>
+                    <span class="bi-meta-value">Recipe patent, processing&#8209;method patent, global trademark registration</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="bi-subtitle">Why NILONICA Is Different from 25,000+ K&#8209;Beauty Products</h3>
+<div class="overview-grid" style="margin-top: 24px;">
+    <div class="overview-card">
+        <h3>A Rare, Little&#8209;Known Shea</h3>
+        <p>Everyone has heard of shea butter &mdash; few know this one. NILONICA uses a rare, naturally occurring shea species found only along the Nile River.</p>
+    </div>
+    <div class="overview-card">
+        <h3>Process Over Ingredient</h3>
+        <p>What matters more than a good raw material is how it's processed. No boiling, no melting &mdash; only cold&#8209;press organic processing, certified by France's Eco&#8209;cert Organic and the USDA Organic standard.</p>
+    </div>
+    <div class="overview-card">
+        <h3>Maximum, Optimal Recipe</h3>
+        <p>Even the best ingredient falls flat in a small dose. NILONICA formulates at the maximum, most optimal concentration &mdash; and names each product after that very percentage.</p>
+    </div>
+    <div class="overview-card">
+        <h3>Clinically Verified Efficacy</h3>
+        <p>Not a claim we make ourselves &mdash; efficacy confirmed through skin clinical trials for deep moisture, itch relief, skin barrier improvement, skin regeneration, and redness improvement.</p>
+    </div>
+</div>
+
+<h3 class="bi-subtitle">The Shea Line &mdash; Moisture by Concentration</h3>
+<p class="bi-subtitle-sm">Three tiers of 100% organic shea butter formulas, dosed by concentration to match every need &mdash; the number is the shea concentration, the number is the moisture strength.</p>
+<div class="cert-grid">
+    <div class="cert-card">
+        <div class="cert-icon">10%</div>
+        <h3>Body Butter</h3>
+        <span class="cert-date">100,000 ppm shea concentration</span>
+        <p>A light, everyday body&#8209;care velvet cream that melts into skin temperature, forming a moisture barrier that lasts all day.</p>
+    </div>
+    <div class="cert-card">
+        <div class="cert-icon">25%</div>
+        <h3>Face + Hand</h3>
+        <span class="cert-date">250,000 ppm shea concentration</span>
+        <p>Concentrated moisture and anti&#8209;aging care that reinforces the skin barrier, formulated to be gentle on sensitive skin.</p>
+    </div>
+    <div class="cert-card">
+        <div class="cert-icon">50%</div>
+        <h3>Care Balm</h3>
+        <span class="cert-date">500,000 ppm shea concentration</span>
+        <p>The highest&#8209;concentration line, focused on intensive hydration. A melting texture for instant absorption &mdash; suited to every age, area, and skin type.</p>
+    </div>
+</div>
+
+<h3 class="bi-subtitle">Global Expansion &mdash; 11 Markets Active or in Discussion</h3>
+<p class="bi-subtitle-sm">Just one year after launch, NILONICA is expanding globally with the US and Europe at its core.</p>
+<div class="market-badges">
+    <span class="tag">🇺🇸 United States</span>
+    <span class="tag">🌍 Middle East</span>
+    <span class="tag">🇷🇺 Russia</span>
+    <span class="tag">🇨🇳 China</span>
+    <span class="tag">🇯🇵 Japan</span>
+    <span class="tag">🇰🇭 Cambodia</span>
+    <span class="tag">🇪🇸 Spain</span>
+    <span class="tag">🇱🇹 Lithuania</span>
+    <span class="tag">🇵🇪 Peru</span>
+    <span class="tag">🇦🇺 Australia</span>
+</div>
+<div class="partner-note">
+    <p><strong>Global distribution talks under way</strong> with a US&#8209;based total cosmetics distribution group (P***** Co.) with $1B+ in beauty marketing, distribution, and offline store operations &mdash; alongside listing requests from multiple US beauty curation platforms including Walmart, Yami, Wee, and 1%M.</p>
+</div>
+
+<h3 class="bi-subtitle">NILONICA's Korea Marketing Momentum</h3>
+<div class="timeline-summary" style="margin-top: 24px;">
+    <div class="timeline-panel">
+        <h3>Online</h3>
+        <ul>
+            <li>Growing a brand supporter community centered on its own mall</li>
+            <li>Listed on Hyundai H Mall</li>
+            <li>Wadiz crowdfunding campaign planned for September</li>
+            <li>In discussions to list on Kurly Market and Kakao Makers</li>
+            <li>Home shopping broadcast planned for November</li>
+        </ul>
+    </div>
+    <div class="timeline-panel">
+        <h3>Offline</h3>
+        <ul>
+            <li>Listed at Incheon Airport Duty Free (SME duty&#8209;free zone)</li>
+            <li>Carried in major drugstore&#8209;style pharmacies (Yongsan, Cheongnyangni, and more)</li>
+            <li>Hyundai Department Store Pangyo branch (pop&#8209;up planned for October) and AK Pyeongtaek branch</li>
+            <li>Preparing a product review session with Shinsegae Duty Free</li>
+        </ul>
+    </div>
+</div>
+<p class="bi-subtitle-sm" style="margin-top: 36px;">Backed by recipe and processing&#8209;method patents and global trademark registration, NILONICA is building toward a stronger foothold on Amazon overseas, expansion into US department stores and duty&#8209;free, and a European push centered on Paris, France, extending to Spain, Italy, Germany, and the UK.</p>
+</div>
+</section>
+
+<section id="brands">
+<div class="container">
+<div class="section-title">
+    <h2>Core Brand Portfolio</h2>
+    <p>Proprietary brands that solve market needs and deliver premium value</p>
+</div>
+
+<div class="brand-grid">
+    <div class="brand-card">
+<div class="brand-header">
+<div class="brand-logo-chip"><img src="../nilonica_logo.png" alt="NILONICA"></div>
+<h3>NILONICA</h3>
+<p>Premium Botanical Skincare</p>
+</div>
+<div class="brand-body">
+<p class="brand-desc">A deep-moisture skincare brand built on a rare shea species found only along Africa's Nile River, cold-pressed and organically processed at maximum concentration, with efficacy confirmed through skin clinical trials. Now expanding into 11 countries centered on the US and Europe.</p>
+<div class="product-tags">
+<span class="tag">Shea 50 Deep Moisture Care Balm</span>
+<span class="tag">Shea 25 Daily Face Cream</span>
+<span class="tag">Shea 25 Botanic Hand Cream</span>
+<span class="tag">Shea 10 Body Butter</span>
+<span class="tag">Melting Butter Lip Care (Coming Soon)</span>
+<span class="tag">Eco-cert &amp; USDA Organic Certified</span>
+<span class="tag">Clinically Tested</span>
+</div>
+<div class="brand-links" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+<a href="https://www.amazon.com/stores/NILONICA/page/E6BCA244-F73F-4953-B8BD-47FB7E5F7D69?lp_asin=B0FR4C7BKK&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto&bl_grd_status=override" target="_blank" rel="noopener" class="tag" style="background-color: var(--primary-color); color: #ffffff; text-decoration: none;">Amazon Store</a>
+<a href="https://www.instagram.com/nilonica_global/" target="_blank" rel="noopener" class="tag" style="background-color: #E1306C; color: #ffffff; text-decoration: none;">Instagram</a>
+</div>
+</div>
+</div>
+    
+    <a class="brand-card" href="https://frenshea.net/" target="_blank" rel="noopener">
+        <div class="brand-header">
+            <div class="brand-logo-chip"><img src="../frenshea_logo.png" alt="Dr. Frenshea"></div>
+            <h3>Dr. Frenshea</h3>
+            <p>Expert Pet Skincare</p>
+        </div>
+        <div class="brand-body">
+            <p class="brand-desc">A dog-specialized skincare brand co-developed with Professor Hwang Chul-yong, director of Seoul National University's animal hospital, featuring an all-EWG-green-rated formula and the patent-pending "4 Care-Complex."</p>
+            <div class="product-tags">
+                <span class="tag">Shea Butter Shampoo</span>
+                <span class="tag">Shea Butter Paw Cleanser</span>
+                <span class="tag">Two-Phase Mist</span>
+                <span class="tag">Listed on Veterinary Marketplace</span>
+            </div>
+        </div>
+    </a>
+    
+    <a class="brand-card" href="https://smartstore.naver.com/thecompanyu/category/e571ea2e177743999f5c28b38a281cb8?cp=1" target="_blank" rel="noopener">
+        <div class="brand-header">
+            <div class="brand-logo-chip"><img src="../multigyn_logo.png" alt="Multi-Gyn"></div>
+            <h3>Multi-Gyn</h3>
+            <p>Y-Zone Women Care</p>
+        </div>
+        <div class="brand-body">
+            <p class="brand-desc">A nature-friendly Y-zone specialty care brand based on aloe as its main ingredient. Backed by proven product quality, it has long been used and supplied to gynecology clinics and women's hospitals in Korea.</p>
+            <div class="product-tags">
+                <span class="tag">Feminine Wash</span>
+                <span class="tag">Supplied to Women's Hospitals</span>
+                <span class="tag">Naturally-derived Aloe Base</span>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+</section>
+
+<section id="activity">
+<div class="container">
+<div class="section-title">
+    <h2>Global Activity with Passion</h2>
+    <p>THE COMPANY U's major trade fairs around the world in 2026</p>
+</div>
+<p class="activity-intro">From New York to Tokyo, Paris, Las Vegas, Chengdu, Shanghai, and Amsterdam &mdash; THE COMPANY U is expanding the presence of K-beauty by directly participating in B2B and B2C trade fairs across the world's key hubs.</p>
+
+<div class="exhibition-grid">
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(90deg,#BC002D 50%,#ffffff 50%);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇯🇵</span> Japan &middot; Tokyo</div>
+            <div class="exhibition-name">Tokyo Beauty World 2026</div>
+            <div class="exhibition-meta">2026.05.18 &ndash; 05.20 &middot; Tokyo Big Sight</div>
+            <p class="exhibition-desc">Japan's largest beauty and wellness trade fair, bringing together over 950 brands and 60,000+ buyers as a key gateway into the Asian market.</p>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(90deg,#0055A4 33%,#ffffff 33% 66%,#EF4135 66%);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇫🇷</span> France &middot; Paris</div>
+            <div class="exhibition-name">2026 K-Expo France</div>
+            <div class="exhibition-meta">2026 &middot; Paris</div>
+            <p class="exhibition-desc">A flagship European event for Korean culture and K-culture, providing a strategic platform to raise K-beauty brand awareness and network with local buyers.</p>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(90deg,#DE2910,#FFDE00);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇨🇳</span> China &middot; Chengdu</div>
+            <div class="exhibition-name">2026 Chengdu CCIB Exhibition</div>
+            <div class="exhibition-meta">2026 &middot; Chengdu</div>
+            <p class="exhibition-desc">A trade fair held in Chengdu, the gateway to Western China's domestic market, used as a bridgehead for expanding mainland Chinese distribution in tandem with NMPA certification.</p>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(90deg,#DE2910,#FFDE00);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇨🇳</span> China &middot; Shanghai</div>
+            <div class="exhibition-name">2026 Shanghai Baby Fair</div>
+            <div class="exhibition-meta">2026 &middot; Shanghai</div>
+            <p class="exhibition-desc">A trade fair specialized in the infant and kids industry, targeting the premium baby and family care market with a low-irritant, EWG green-rated product line.</p>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(90deg,#B22234,#ffffff,#3C3B6E);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇺🇸</span> USA &middot; Las Vegas</div>
+            <div class="exhibition-name">2026 Cosmoprof Las Vegas</div>
+            <div class="exhibition-meta">2026.07.13 &ndash; 07.15 &middot; Mandalay Bay</div>
+            <p class="exhibition-desc">The largest B2B beauty trade fair in the Americas, featuring around 1,100 brands, used to expand Amazon entry and North American distribution partnerships.</p>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <div class="exhibition-flag" style="background:linear-gradient(180deg,#AE1C28 33%,#ffffff 33% 66%,#21468B 66%);"></div>
+        <div class="exhibition-body">
+            <div class="exhibition-country"><span class="exhibition-flag-emoji">🇳🇱</span> Netherlands</div>
+            <div class="exhibition-name">2026 Netherland Pop-up</div>
+            <div class="exhibition-meta">2026 &middot; Netherlands</div>
+            <p class="exhibition-desc">A pop-up store connecting directly with local European consumers, delivering an experiential brand experience and driving offline distribution across Europe.</p>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="certifications">
+<div class="container">
+<div class="section-title">
+    <h2>Certifications & Awards</h2>
+    <p>Key certifications and awards recognizing THE COMPANY U's technology and product competitiveness</p>
+</div>
+
+<div class="cert-grid">
+    <div class="cert-card">
+        <div class="cert-icon">👩</div>
+        <h3>Women-Owned Business Certification</h3>
+        <span class="cert-date">Certified 2024</span>
+        <p>Recognized as a women-owned business, reflecting the company’s commitment to diversity, inclusive leadership, and sustainable growth in the global beauty and healthcare market.</p>
+        <ul class="cert-meta">
+            <li><strong>Company</strong>THE COMPANY U Co., Ltd.</li>
+            <li><strong>Focus</strong>Diversity & Inclusive Ownership</li>
+            <li><strong>Value</strong>Women-led Growth and Social Impact</li>
+        </ul>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-icon">🏛️</div>
+        <h3>Venture Business Certification</h3>
+        <span class="cert-date">Valid 2025.03.18 &ndash; 2028.03.17</span>
+        <p>Officially certified as an Innovative Growth-type Venture Business by the Korea Venture Business Association, under Article 25 of the Act on Special Measures for the Promotion of Venture Businesses.</p>
+        <ul class="cert-meta">
+            <li><strong>Company</strong>THE COMPANY U Co., Ltd.</li>
+            <li><strong>Certification Type</strong>Innovative Growth Type</li>
+            <li><strong>Issuing Authority</strong>Venture Business Certification Body (Korea Venture Business Association)</li>
+        </ul>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h3>Public Home Shopping Contest Excellence Award</h3>
+        <span class="cert-date">Awarded 2026.06.25</span>
+        <p>Received the Excellence Award for product competitiveness at the "2026 5th Domestic Outstanding Idea & Innovative Enterprise Product Contest" hosted by Public Home Shopping.</p>
+        <ul class="cert-meta">
+            <li><strong>Host</strong>Public Home Shopping Co., Ltd.</li>
+            <li><strong>Sponsor</strong>Ministry of SMEs and Startups</li>
+        </ul>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <h3>Patent Registration Decision &ndash; Shea Butter-based Preservative-free Cosmetic Material</h3>
+        <span class="cert-date">Decision Date 2026.07.21</span>
+        <p>A patent registration decision has been received for a shea butter-based preservative-free cosmetic composition and the shea butter-based preservative-free cosmetic material containing it.</p>
+        <ul class="cert-meta">
+            <li><strong>Applicant</strong>THE COMPANY U Co., Ltd.</li>
+        </ul>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="global" class="roadmap">
+<div class="container">
+<div class="section-title">
+    <h2>Global Expansion & Certification Status</h2>
+    <p>Participation in major beauty trade fairs worldwide and completed regulatory certifications by country</p>
+</div>
+
+<div class="table-responsive">
+    <table>
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Regulatory & National Certification</th>
+                <th>Distribution & Supply Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>South Korea</strong></td>
+                <td><span class="status-badge status-complete">MFDS Certified</span></td>
+                <td>Online channels; listed at Incheon Airport Duty Free</td>
+            </tr>
+            <tr>
+                <td><strong>United States</strong></td>
+                <td><span class="status-badge status-complete">MOCRA, FDA Reg. Complete</span></td>
+                <td>Amazon brand store established and B2B channel operating</td>
+            </tr>
+            <tr>
+                <td><strong>Russia</strong></td>
+                <td><span class="status-badge status-complete">Russian Registration Complete</span></td>
+                <td>Local supply underway (export contract worth $150K completed)</td>
+            </tr>
+            <tr>
+                <td><strong>Japan</strong></td>
+                <td><span class="status-badge status-complete">MHLW Registration Complete</span></td>
+                <td>Exploring entry into Rakuten, Amazon Japan, and offline stores</td>
+            </tr>
+            <tr>
+                <td><strong>Europe</strong></td>
+                <td><span class="status-badge status-complete">CPNP Certified</span></td>
+                <td>Local offline channel distribution process underway</td>
+            </tr>
+            <tr>
+                <td><strong>Middle East (UAE/Saudi Arabia)</strong></td>
+                <td><span class="status-badge status-complete">UAE Certification Complete</span></td>
+                <td>Planned entry into the K-Beauty section of the permanent "KOREA 360" showcase</td>
+            </tr>
+            <tr>
+                <td><strong>China</strong></td>
+                <td><span class="status-badge status-progress">NMPA In Progress</span></td>
+                <td>Securing target lines for online and offline market entry</td>
+            </tr>
+            <tr>
+                <td><strong>Southeast Asia (Vietnam/Thailand)</strong></td>
+                <td><span class="status-badge status-complete">FDA Certification Complete</span></td>
+                <td>Entry into Vietnam (online mall) and Thailand (offline mall)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer-inner">
+<div>
+    <div class="footer-logo">THE COMPANY U</div>
+    <p class="footer-text" style="margin-top: 5px;">Global Premium Beauty &amp; Healthcare Brand Distributor</p>
+</div>
+<div class="footer-text">
+    <p>© 2026 THE COMPANY U. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
